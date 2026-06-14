@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daminda Weerakoon - Founder | Healing City</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Social & Action Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top, #061f19 0%, #020617 100%);
+            min-height: 100vh;
+        }
+        .luxury-card {
+            background: rgba(8, 15, 20, 0.85);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9);
+        }
+        .btn-minimal {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-minimal:hover {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.25);
+        }
+        .btn-ecosystem {
+            background: linear-gradient(135deg, rgba(6, 44, 35, 0.4) 0%, rgba(2, 12, 10, 0.6) 100%);
+            border: 1px solid rgba(0, 230, 153, 0.15);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-ecosystem:hover {
+            background: linear-gradient(135deg, rgba(6, 44, 35, 0.7) 0%, rgba(2, 25, 20, 0.8) 100%);
+            border-color: rgba(0, 230, 153, 0.5);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 12px 24px -10px rgba(0, 230, 153, 0.3);
+        }
+        .btn-primary-luxury {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-primary-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -8px rgba(5, 150, 105, 0.5);
+            background: linear-gradient(135deg, #00e699 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="py-12 px-4 flex justify-center items-center">
+
+    <!-- Standalone Digital Card Container -->
+    <div class="w-full max-w-md bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-slate-200 luxury-card rounded-[32px] p-6 relative overflow-hidden">
+        
+        <!-- Ambient lighting background gradients -->
+        <div class="absolute top-0 left-1/4 w-32 h-24 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 right-0 w-32 h-24 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <!-- Profile Content Container -->
+        <div class="space-y-6 relative z-10">
+            
+            <!-- PREMIUM ASYMMETRICAL PROFILE HEADER -->
+            <div class="space-y-4">
+                <!-- Cover Photo: Completely Unobstructed -->
+                <div class="w-full h-36 rounded-2xl shadow-lg border border-emerald-950/20 overflow-hidden relative bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(6,44,35,0.2) 0%, rgba(2,12,10,0.6) 100%), url('https://i.imgur.com/NOTWjWR.jpg');">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,230,153,0.05)_0%,transparent_100%)]"></div>
+                </div>
+                
+                <!-- Profile Identity Card Block (Perfect Flex Container with Box-Sizing) -->
+                <div class="flex items-center w-full box-border pb-4 border-b border-slate-800/60 relative z-20">
+                    <!-- Left: Profile Avatar (Perfect 80px Circular Alignment, No Left Margin Deflection) -->
+                    <div class="w-20 h-20 rounded-full border-4 border-emerald-500/30 shadow-xl overflow-hidden bg-slate-950 shrink-0">
+                        <img src="https://i.imgur.com/vLFpDkI.jpg" alt="DAMINDA WEERAKOON" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" onerror="this.src='https://placehold.co/400x400/020617/10b981?text=DW'">
+                    </div>
+                    
+                    <!-- Right: Text Content stretching precisely to match the Cover Photo right boundary -->
+                    <div class="flex-1 text-left pl-[15px] min-w-0 flex flex-col justify-center">
+                        <h1 class="text-xl md:text-[22px] font-extrabold tracking-wide text-white uppercase font-sans leading-none m-0">DAMINDA WEERAKOON</h1>
+                        <p class="text-xs font-bold text-slate-300 tracking-widest uppercase mt-1.5 mb-0.5">Founder, Healing City - Badulla</p>
+                        <p class="text-[9.5px] md:text-[11px] font-black uppercase tracking-wider text-left leading-tight" style="color: #00e699;">The Experience Based Tourism Visionary</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save Contact Action Button -->
+            <div class="space-y-1">
+                <button onclick="downloadVCF()" class="w-full btn-primary-luxury py-3.5 rounded-xl font-bold text-slate-950 flex items-center justify-center gap-2.5 text-xs tracking-wider uppercase shadow-lg transition-all">
+                    <i class="fa-solid fa-user-plus text-sm"></i>
+                    Save Contact to Device
+                </button>
+            </div>
+
+            <!-- Credentials & Background Block (Grid Layout) -->
+            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 space-y-3">
+                <div class="flex items-center gap-2 text-emerald-400">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <h3 class="text-[10px] font-bold uppercase tracking-widest">Credentials & Background</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-2">
+                    <!-- Qualification 1 -->
+                    <div class="flex items-center gap-3 p-2.5 bg-[#11201d] border border-emerald-950/40 rounded-xl transition-all hover:bg-[#152a26]">
+                        <span class="text-sm shrink-0">🎓</span>
+                        <span class="text-[10px] font-semibold text-slate-200">B.A. in Tourism Management (RUSL)</span>
+                    </div>
+                    <!-- Qualification 2 -->
+                    <div class="flex items-center gap-3 p-2.5 bg-[#11201d] border border-emerald-950/40 rounded-xl transition-all hover:bg-[#152a26]">
+                        <span class="text-sm shrink-0">⚖️</span>
+                        <span class="text-[10px] font-semibold text-slate-200">LL.B. (Hons) (OUSL)</span>
+                    </div>
+                    <!-- Qualification 3 -->
+                    <div class="flex items-center gap-3 p-2.5 bg-[#11201d] border border-emerald-950/40 rounded-xl transition-all hover:bg-[#152a26]">
+                        <span class="text-sm shrink-0">✍️</span>
+                        <span class="text-[10px] font-semibold text-slate-200">Dip. in Writership & Communication (USJP)</span>
+                    </div>
+                    <!-- Qualification 4 -->
+                    <div class="flex items-center gap-3 p-2.5 bg-[#11201d] border border-emerald-950/40 rounded-xl transition-all hover:bg-[#152a26]">
+                        <span class="text-sm shrink-0">⚖️</span>
+                        <span class="text-[10px] font-semibold text-slate-200">Dip. in Law & Human Rights (SIBCC)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Healing City Section (Premium Wellness Brand Edition) -->
+            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 space-y-3">
+                <div class="flex items-center gap-2 text-emerald-400">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                    <h3 class="text-[10px] font-bold uppercase tracking-widest">About Healing City</h3>
+                </div>
+                <p class="text-[10px] text-slate-300 leading-relaxed font-medium">
+                    A premier sanctuary and luxury wellness initiative positioning Badulla, Sri Lanka as a world class healing destination. Rooted in purposeful, conscious travel that blends regional heritage with calm and restoration.
+                </p>
+                <!-- 2x2 Grid for Minimalist Concept Pillars (Bullet points instead of emojis) -->
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                    <!-- Nature -->
+                    <div class="flex items-center gap-2 p-2 bg-[#11201d] border border-emerald-950/40 rounded-xl">
+                        <span class="text-emerald-400 font-extrabold text-xs shrink-0">•</span>
+                        <span class="text-[9.5px] font-semibold text-slate-200">Nature</span>
+                    </div>
+                    <!-- Culture -->
+                    <div class="flex items-center gap-2 p-2 bg-[#11201d] border border-emerald-950/40 rounded-xl">
+                        <span class="text-emerald-400 font-extrabold text-xs shrink-0">•</span>
+                        <span class="text-[9.5px] font-semibold text-slate-200">Culture</span>
+                    </div>
+                    <!-- History -->
+                    <div class="flex items-center gap-2 p-2 bg-[#11201d] border border-emerald-950/40 rounded-xl">
+                        <span class="text-emerald-400 font-extrabold text-xs shrink-0">•</span>
+                        <span class="text-[9.5px] font-semibold text-slate-200">History</span>
+                    </div>
+                    <!-- Traditional Healing -->
+                    <div class="flex items-center gap-2 p-2 bg-[#11201d] border border-emerald-950/40 rounded-xl">
+                        <span class="text-emerald-400 font-extrabold text-xs shrink-0">•</span>
+                        <span class="text-[9.5px] font-semibold text-slate-200">Traditional Healing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HEALING CITY ECOSYSTEM (5 PILLARS) -->
+            <div class="space-y-2">
+                <h3 class="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-1">Healing City Ecosystem</h3>
+                
+                <div class="grid grid-cols-1 gap-2">
+                    <!-- 1. Healing City Experiences -->
+                    <a href="https://healingcity.lk/experiences" target="_blank" class="btn-ecosystem px-4 py-3 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-200">
+                            <i class="fa-solid fa-mountain-sun text-emerald-400 text-xs w-4"></i>
+                            Healing City Experiences
+                        </span>
+                        <i class="fa-solid fa-arrow-right-long text-emerald-400/70 text-[10px]"></i>
+                    </a>
+
+                    <!-- 2. The Great Escape Healing Center -->
+                    <a href="https://healingcity.lk/healing-center" target="_blank" class="btn-ecosystem px-4 py-3 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-200">
+                            <i class="fa-solid fa-spa text-emerald-400 text-xs w-4"></i>
+                            The Great Escape Healing Center
+                        </span>
+                        <i class="fa-solid fa-arrow-right-long text-emerald-400/70 text-[10px]"></i>
+                    </a>
+
+                    <!-- 3. Healing City Tourism Academy -->
+                    <a href="https://healingcity.lk/academy" target="_blank" class="btn-ecosystem px-4 py-3 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-200">
+                            <i class="fa-solid fa-graduation-cap text-emerald-400 text-xs w-4"></i>
+                            Healing City Tourism Academy
+                        </span>
+                        <i class="fa-solid fa-arrow-right-long text-emerald-400/70 text-[10px]"></i>
+                    </a>
+
+                    <!-- 4. Healing City Product -->
+                    <a href="https://healingcity.lk/products" target="_blank" class="btn-ecosystem px-4 py-3 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-200">
+                            <i class="fa-solid fa-leaf text-emerald-400 text-xs w-4"></i>
+                            Healing City Product
+                        </span>
+                        <i class="fa-solid fa-arrow-right-long text-emerald-400/70 text-[10px]"></i>
+                    </a>
+
+                    <!-- 5. Healing City Blog -->
+                    <a href="https://healingcity.lk/blog" target="_blank" class="btn-ecosystem px-4 py-3 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-200">
+                            <i class="fa-solid fa-feather-pointed text-emerald-400 text-xs w-4"></i>
+                            Healing City Blog
+                        </span>
+                        <i class="fa-solid fa-arrow-right-long text-emerald-400/70 text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Communication Hub -->
+            <div class="space-y-3">
+                <h3 class="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-1">Connect Directly</h3>
+                
+                <!-- Personal Channels -->
+                <div class="space-y-2">
+                    <p class="text-[8px] font-bold text-slate-500 uppercase px-1">Personal Connection</p>
+                    <a href="tel:+947169818129" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-user text-emerald-400 text-xs"></i>Voice Call
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                    <a href="https://wa.me/94716981829" target="_blank" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>WhatsApp
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                    <a href="mailto:damindaweerakoon@yahoo.com" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-envelope text-emerald-400 text-xs"></i>Personal Email
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                </div>
+
+                <!-- Business Channels -->
+                <div class="space-y-2 pt-2">
+                    <p class="text-[8px] font-bold text-slate-500 uppercase px-1">Business Connection</p>
+                    <a href="tel:+94771133208" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-briefcase text-emerald-400 text-xs"></i>Business Voice Call
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                    <a href="https://wa.me/94771133208" target="_blank" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>Business WhatsApp
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                    <a href="mailto:healingcitybadulla@gmail.com" class="btn-minimal px-4 py-2.5 rounded-xl flex items-center justify-between text-xs font-semibold">
+                        <span class="flex items-center gap-3 text-slate-300">
+                            <i class="fa-solid fa-envelope text-emerald-400 text-xs"></i>Business Email
+                        </span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[9px]"></i>
+                    </a>
+                </div>
+
+                <!-- Web Portal Link with Pulsing Online Badge -->
+                <div class="pt-2">
+                    <a href="https://healingcity.lk" target="_blank" class="btn-minimal px-4 py-3 rounded-xl flex items-center justify-between text-xs font-bold border-emerald-500/20 bg-emerald-500/5">
+                        <span class="flex items-center gap-3 text-emerald-100">
+                            <i class="fa-solid fa-globe text-emerald-400 text-xs"></i>
+                            Official Web Portal
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="text-[8px] text-emerald-400 uppercase tracking-widest">Online</span>
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="space-y-2 pt-4 border-t border-slate-800/60">
+                <h3 class="text-[9px] font-bold text-slate-400 uppercase tracking-widest text-center">Social Presence</h3>
+                <div class="flex justify-center items-center gap-8">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/healingcitybadulla" target="_blank" class="text-lg hover:text-emerald-400 transition-colors" style="color: #8fa09c;">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/healingcitybadulla" target="_blank" class="text-lg hover:text-emerald-400 transition-colors" style="color: #8fa09c;">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/damindaweerakoon" target="_blank" class="text-lg hover:text-emerald-400 transition-colors" style="color: #8fa09c;">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Details -->
+            <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-[10px] text-slate-500">
+                <button onclick="shareProfile()" class="hover:text-emerald-400 flex items-center gap-1 transition-all">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    Share Profile
+                </button>
+                <span>Healing City Tech</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+
+        // Custom dynamic toast message generator
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 left-1/2 -translate-x-1/2 bg-slate-900 border border-emerald-500/40 text-emerald-400 text-xs px-6 py-3 rounded-xl shadow-2xl font-bold z-50 animate-fade-in";
+            toast.innerText = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // Action: Generate and download raw VCF vCard directly to file system
+        function downloadVCF() {
+            const name = "Daminda Weerakoon";
+            const role = "Founder, Healing City - Badulla";
+            const phone = "+94771133208";
+            const email = "damindaweerakoon@yahoo.com";
+
+            const vcard = "BEGIN:VCARD\n" +
+                          "VERSION:3.0\n" +
+                          "FN:" + name + "\n" +
+                          "ORG:Healing City\n" +
+                          "TITLE:" + role + "\n" +
+                          "TEL;TYPE=CELL,VOICE:" + phone + "\n" +
+                          "EMAIL;TYPE=PREF,INTERNET:" + email + "\n" +
+                          "ADR;TYPE=WORK:;;Badulla;;;;Sri Lanka\n" +
+                          "END:VCARD";
+                          
+            const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.download = `${name.replace(' ', '_')}_Contact.vcf`;
+            a.href = url;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            showToast("Contact card saved successfully!");
+        }
+
+        // Action: Copy active web link to client clipboard
+        function shareProfile() {
+            const dummy = document.createElement('input');
+            const text = window.location.href;
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            
+            showToast("Profile link copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
